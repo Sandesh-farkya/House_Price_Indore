@@ -1,6 +1,7 @@
 pandas
 numpy
 gunicorn
+traceback
 scikit-learn
 flask
 joblib
