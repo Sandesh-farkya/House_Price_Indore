@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.btn { 
+    display: inline-block; 
+    padding: 4px 10px; 
+    background-color: #f5f5f5;
+    color: #333333; 
+    border-radius: 4px; 
+}
+body { 
+    font-family: 'Open Sans', sans-serif;
+    background: -webkit-linear-gradient(top, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%);
+    color: #fff;
+    text-align: center;
+}
+.login { 
+    position: absolute;
+    top: 40%; 
+    left: 50%; 
+    margin: -150px 0 0 -150px; 
+    width: 400px; 
+}
+input { 
+    width: 100%; 
+    padding: 10px; 
+    font-size: 13px; 
+    color: #fff; 
+}
