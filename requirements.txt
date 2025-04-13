@@ -2,4 +2,5 @@ pandas
 numpy
 gunicorn
 scikit-learn
-streamlit 
+flask
+joblib
