@@ -7,7 +7,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the trained model
-model_path = "C:\\Users\\sporw\\Desktop\\House Price\\model\\model.pkl"
+model_path = "model.pkl"
 model = joblib.load(model_path)
 
 # Mapping for categorical columns
