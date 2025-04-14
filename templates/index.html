@@ -1,1 +1,99 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arimo', sans-serif;
+    }
+    .login {
+      background: rgba(255, 254, 254, 0);
+      padding: 20px;
+      text-align: center;
+      width: 300px;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color:rgb(121, 152, 185);
+    }
+  </style>
+</head>
+<body style="background-image: url('pngtree.jpg'); background-size: cover;">
+    <div class="login">
+      <h1>House Price in Indore</h1>
+      <!-- Main Input Form for User Data -->
+      <form action="{{ url_for('predict') }}" method="POST">
+        <!-- Dropdown for Location -->
+        <select name="location" required>
+          <option value="" disabled selected>Select Location</option>
+          <option value="Rajwada">Rajwada</option>
+          <option value="Palasia">Palasia</option>
+          <option value="AB Road">AB Road</option>
+          <option value="Vijay Nagar">Vijay Nagar</option>
+          <option value="Geeta Bhavan">Geeta Bhavan</option>
+          <option value="Rau">Rau</option>
+          <option value="Bhawarkua">Bhawarkua</option>
+        </select>
+  
+        <!-- Dropdown for Furnished Type -->
+        <select name="furnished" required>
+          <option value="" disabled selected>Select Furnished Type</option>
+          <option value="Furnished">Furnished</option>
+          <option value="Semi-Furnished">Semi-Furnished</option>
+          <option value="Unfurnished">Unfurnished</option>
+        </select>
+  
+        <!-- Dropdown for Bedrooms -->
+        <select name="bedrooms" required>
+          <option value="" disabled selected>Select Number of Bedrooms</option>
+          <option value="1">1 Bedroom</option>
+          <option value="2">2 Bedrooms</option>
+          <option value="3">3 Bedrooms</option>
+          <option value="4">4 Bedrooms</option>
+        </select>
+
+      <!-- Predict Button -->
+      <button type="submit">Predict</button>
+    </form>
+
+    <!-- Display Prediction Text -->
+    {{ prediction_text }}
+  </div>
+</body>
+</html> 
 
